@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Size </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=n">
+    </head>
+    <body>
+        <h1>This Page</h1>
+        <p id="page-size"></p>
+        <script>
+            window.addEventListener('resize', function(){
+                let setter = document.getElementById("page-size");
+                let size = window.innerWidth * window.innerHeight;
+                setter.innerHTML = `Size of window ${size}`
+            })
+
+        </script>
+    </body>
+</html> 

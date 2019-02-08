@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=n">
+    </head>
+    <body>
+        <h1>Unordered List</h1>
+        <input type="text" id="submitter-input">
+        <button type="submit" id="submitter-button">Press Me</button> 
+        <ul id="submitter-list">
+        </ul>
+        <script>
+
+        document.querySelector('#submitter-button').addEventListener('click',function(){
+            let list = document.querySelector("#submitter-list")
+            let userinput = document.querySelector("#submitter-input");
+            let newlistitem = document.createElement("li");
+
+            if(userinput.value.length < 1){
+                alert("input is empty")
+                return false
+            }
+            else if(userinput.value.length > 50){
+                alert("50 characters MAX")
+                return false;
+            }
+            else{
+                newlistitem.innerHTML = document.querySelector("#submitter-input").value;
+                list.appendChild(newlistitem);
+                userinput.value = "";
+
+            }
+            
+
+        })
+        
+        </script>
+    </body>
+</html>
